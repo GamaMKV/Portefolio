@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathis Roberdeau - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="scroll-container">
+
+        <!-- Hero (Scroll 0) - Light Theme -->
+        <section class="screen theme-light" id="hero" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 5vw; position: relative;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; z-index: 2; flex: 1; max-width: 60vw;">
+                <h1 class="clamp-title" style="text-align: left; margin: 0; font-size: clamp(3rem, 8vw, 9rem);">MATHIS<br>ROBERDEAU</h1>
+                <p class="subtitle" style="text-align: left; font-size: clamp(1rem, 1.5vw, 2rem);">DIRECTEUR ARTISTIQUE & DESIGNER MULTIMÉDIA</p>
+            </div>
+            <div style="flex-shrink: 0; margin-left: 2rem;">
+                <img src="../img/pdp-mathis.png" alt="Mathis Roberdeau" class="profile-pic" style="width: clamp(12rem, 20vw, 25rem); height: clamp(12rem, 20vw, 25rem); object-fit: cover; border-radius: 50%; border: 4px solid var(--color-black); box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; font-family: var(--font-heading); font-size: 1.2rem; font-weight: bold; opacity: 0.7;">
+                <span>SCROLL</span>
+                <span style="font-size: 2rem; margin-top: -0.5rem; animation: heroBounce 2s infinite;">↓</span>
+            </div>
+            <style>
+                @keyframes heroBounce {
+                    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+                    40% { transform: translateY(-10px); }
+                    60% { transform: translateY(-5px); }
+                }
+            </style>
+        </section>
+
+        <!-- Courte Présentation (Scroll 1) - Dark Theme -->
+        <section class="screen theme-dark" id="presentation">
+            <div class="content intro-content">
+                <h2 class="title-massive">PRÉAMBULE</h2>
+                <p>Actuellement en BUT MMI, je combine des compétences en design, montage et community management avec
+                    une réelle passion pour le numérique. Je vous laisse explorer mes travaux et mon profil. Bonne
+                    visite !<br><br><strong>Note : l'exploration de ce portfolio
+                        est verrouillée. Utilisez la molette ou les flèches du clavier.</strong></p>
+                <div class="arrows-hint">
+                    <span>↓</span><span>↑</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets Académiques (Scroll 2 et + Carrousel) - Light Theme -->
+        <section class="screen carousel-section theme-light" id="projets-academiques">
+            <div class="top-info">
+                <h2>PROJETS ACADÉMIQUES</h2>
+                <p>Réalisés au sein de l'IUT, individuellement ou en groupe.</p>
+            </div>
+
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+
+                    <!-- AFFICHES PROJECT -->
+                    <div class="slide project-card" data-role="Graphiste"
+                        data-tools="Illustrator, InDesign, Photoshop"
+                        data-desc="Mes différentes créations graphiques pour des événements variés, incluant l'e-sport (PXL Lan) et des projets esthétiques et musicaux (Tournedisque Quadricolor)."
+                        data-pdf-desc="<strong>AFFICHE PXL LAN :</strong><br>Création d'une affiche pour le concours d'e-sport de la PXL Lan. Composition asymétrique axée sur la culture gaming.|<strong>AFFICHE TOURNEDISQUE :</strong><br>Création d'une affiche Quadricolor pour le projet esthétique et musical, utilisant des teintes vives et un design centré sur le vinyle."
+                        data-pdf-src="../img/ROBERDEAU-Mathis_Affiche.pdf,../img/Mathis-ROBERDEAU_Affiche-Quadcolor_Tournedisque_.pdf">
+                        <img src="project_ui.jpg" alt="Affiches" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>Affiches</h3>
+                            <p>Création d'affiches diverses (Galerie PDF).</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW VIDEO PROJECT -->
+                    <div class="slide project-card" data-video-id="BSjPqrK-uEQ"
+                        data-role="Monteur, Sound Designer, Réalisateur" data-tools="Premiere Pro, After Effects"
+                        data-desc="Un terrain de jeu visuel et rythmique exceptionnel. « 3 Games 3 Friends » m'a permis d'explorer le montage synchrone, la colorimétrie dynamique dans le but d'un concours organisé par la PXL Lan. La vidéo a été réalisée en une semaine avec deux autres collègues.<br><br><a href='https://youtu.be/BSjPqrK-uEQ' target='_blank' style='color:inherit; text-decoration:underline;'>Voir la vidéo sur YouTube ↗</a>">
+                        <img src="../img/3Games3Friends.png" alt="3 Games 3 Friends" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>3 Games 3 Friends</h3>
+                            <p>Format Dynamique / Concours Vidéo.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW POKEDEXIA PROJECT -->
+                    <div class="slide project-card" data-role="Développeur Front-End"
+                        data-tools="HTML, CSS, JavaScript"
+                        data-web-src="https://but-mmi.github.io/Pokedexia/"
+                        data-desc="Pokedexia est un projet académique de développement web. L'objectif était de concevoir un Pokedex interactif en utilisant les technologies fondamentales du web (HTML, CSS, JS), en intégrant une logique de filtrage et d'affichage dynamique.<br><br><a href='https://but-mmi.github.io/Pokedexia/' target='_blank' style='color:inherit; text-decoration:underline;'>Visiter le site Pokedexia ↗</a>">
+                        <img src="../img/pokedexia.png" alt="Pokedexia" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>Pokedexia</h3>
+                            <p>Développement Web Front-End</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW CROUSTY MOVIES PROJECT -->
+                    <div class="slide project-card" data-role="Développeur Full-Stack"
+                        data-tools="HTML, CSS, PHP, SQL"
+                        data-web-src="https://a-pedagoarles-mmi.aix.univ-amu.fr/r25012763/sae203/index.php"
+                        data-desc="Crousty Movies est un d'évaluation de films développé dans le cadre d'un projet universitaire. Il utilise HTML, CSS pour le front-end et PHP avec une base de données SQL pour gérer les utilisateurs, les films et les évaluations.<br><br><a href='https://a-pedagoarles-mmi.aix.univ-amu.fr/r25012763/sae203/index.php' target='_blank' style='color:inherit; text-decoration:underline;'>Visiter Crousty Movies ↗</a>">
+                        <img src="../img/crousty-movies.png" alt="Crousty Movies" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>Crousty Movies</h3>
+                            <p>Site d'Évaluation de Films</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets Personnels (Scroll 4) - Dark Theme -->
+        <section class="screen carousel-section theme-dark" id="projets-personnels">
+            <div class="top-info">
+                <h2>PROJETS PERSONNELS</h2>
+                <p>Créations libres et expérimentations visuelles.</p>
+            </div>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <div class="slide project-card" data-role="Fondateur & Technicien"
+                        data-tools="Gestion de Projet, Matériel"
+                        data-web-src="https://ordisanat.fr"
+                        data-desc="Mon entreprise de fabrication, dépannage et d'upgrade d'ordinateurs, elle existe depuis 2024 et est actuellement en activité.<br><br><a href='https://ordisanat.fr' target='_blank' style='color:inherit; text-decoration:underline;'>Visiter Ordi'Sanat ↗</a>">
+                        <img src="../img/ordisanat-cover.jpg" alt="Ordi'Sanat" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>Ordi'Sanat</h3>
+                            <p>Mon auto-entreprise de création.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW ALUMNI PROJECT -->
+                    <div class="slide project-card" data-role="Membre Actif / COPIL"
+                        data-tools="Engagement Associatif, Communauté"
+                        data-desc="Le réseau dont je m'occupe (réseau d'Entreprendre Pour Apprendre, qui crée des mini-entreprises dans des écoles afin de faire découvrir le monde de l'entreprenariat aux jeunes). J'y ai participé et maintenant je suis au COPIL digital alumni et mentor de mini-entreprises.">
+                        <img src="../img/alumni.png" alt="JA Alumni" class="slide-bg">
+                        <div class="slide-overlay">
+                            <h3>JA Alumni FR</h3>
+                            <p>Engagement Associatif de Longue Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qui suis-je (Scroll 5) - Dark Theme -->
+        <section class="screen theme-dark" id="about">
+            <div class="content intro-content" style="text-align: center;">
+                <h2 class="title-massive" style="font-size: clamp(3rem, 8vw, 8rem);">QUI SUIS-JE ?</h2>
+                <p style="font-size: 1.8rem; margin: 2rem 0; font-style: italic; opacity: 0.9;">
+                    "La technique au service de l'esthétique."
+                </p>
+                <p>Passionné par la vidéo et l'écriture et expert en informatique, je construis des expériences numériques où la performance rencontre l'élégance. Mon approche ? Un mélange de rigueur technique et d'une curiosité insatiable pour le "comment ça marche" qui s'immisce dans tous mes projets, et je l'espère dans le vôtre !</p>
+            </div>
+        </section>
+
+        <!-- Expériences / CV (Scroll 6) - Light Theme -->
+        <section class="screen theme-light" id="experiences">
+            <div class="content list-content">
+                <h2 style="font-size: 5rem; margin-bottom:2rem;">EXPÉRIENCES</h2>
+                <ul class="cv-list">
+                    <li>
+                        <strong>Chargé de projet digital</strong> <span>(Depuis Janv 2025)</span><br>
+                        <em>COPIL JA alumni FR</em> - Structuration de BDD et Veille techno
+                    </li>
+                    <li>
+                        <strong>Auto-Entrepreneur</strong> <span>(Depuis Oct 2024)</span><br>
+                        <em>Ordi'sanat</em> - Réparation & Création PC sur mesure
+                    </li>
+                    <li>
+                        <strong>Serveur Polyvalent</strong> <span>(Mai - Sept 2025)</span><br>
+                        <em>Baumanière</em> - Relation client, Mixologie, Vente
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact & Remerciements (Scroll 7) - Dark Theme -->
+        <section class="screen theme-dark" id="contact">
+            <div class="content intro-content" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <img src="../img/pdp-mathis.png" alt="Mathis Roberdeau" class="profile-pic" style="width: 12rem; height: 12rem; object-fit: cover; border-radius: 50%; margin-bottom: 2rem; border: 4px solid var(--color-cream);">
+                <h2 class="title-massive">CONTACT</h2>
+                <div style="margin: 3rem 0;">
+                    <a href="mailto:mroberdeau.pro@gmail.com"
+                        style="color: var(--color-cream); text-decoration: none; font-size: 2.5rem; border-bottom: 2px solid var(--color-cream); padding-bottom: 0.5rem; transition: opacity 0.3s; font-weight: bold;">
+                        mroberdeau.pro@gmail.com
+                    </a>
+                </div>
+                <p style="font-size: 1.5rem; opacity: 0.8; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    07 69 47 06 84
+                </p>
+                <p
+                    style="margin-top: 4rem; text-transform: uppercase; font-family: var(--font-heading); font-size: 1.2rem; letter-spacing: 2px;">
+                    Merci de votre visite • Travaillons ensemble
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modale "Detail Projet" Plein Écran Ajustée Pour Contenir la Vidéo -->
+    <div id="project-detail-view">
+        <div class="detail-bg-container">
+            <img src="" alt="" id="detail-hero-img">
+        </div>
+
+        <button class="close-btn" id="close-project-btn">FERMER [ÉCHAP]</button>
+
+        <div class="detail-content">
+            <div class="detail-layout">
+
+                <div class="detail-text-area">
+                    <h1 class="detail-title" id="detail-title">Titre du Projet</h1>
+                    <div class="detail-infobox">
+                        <div class="info-column">
+                            <h3>RÔLE</h3>
+                            <p id="detail-role">Direction Artistique</p>
+                        </div>
+                        <div class="info-column">
+                            <h3>OUTILS</h3>
+                            <p id="detail-tools">Figma</p>
+                        </div>
+                    </div>
+                    <div class="detail-text" id="detail-desc">
+                        <p>Texte narratif...</p>
+                    </div>
+                    <button id="enter-fullscreen-btn" style="display: none;">Activer le mode lecteur interactif</button>
+                </div>
+
+                <div class="detail-media-area" id="detail-media-area">
+                    <button id="exit-fullscreen-btn">Quitter le mode interactif (Échap)</button>
+                    <div id="media-container" style="flex-grow: 1; width: 100%; height: 100%;"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
