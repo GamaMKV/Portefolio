@@ -58,7 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => { isAnimating = false; }, 850); 
     }
 
+    let lastWheelTime = 0;
     window.addEventListener('wheel', (e) => {
+        const now = Date.now();
+        const delta = now - lastWheelTime;
+        lastWheelTime = now;
+
+        // Anti-inertie : Ignore les événements rapprochés (mouvement continu du trackpad) pour déclencher 1 seule action par "vrai" coup de molette/doigt.
+        if (delta < 80) return;
+
         if (e.deltaY > 30) navigate(1);
         else if (e.deltaY < -30) navigate(-1);
     });
