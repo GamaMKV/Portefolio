@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const resetTimer = () => {
                         if(window.pdfSlideInterval) clearInterval(window.pdfSlideInterval);
-                        window.pdfSlideInterval = setInterval(() => updatePdf(currentIdx + 1), 6000);
+                        window.pdfSlideInterval = setInterval(() => updatePdf(currentIdx + 1), 15000);
                     };
 
                     select.addEventListener('change', (e) => {
