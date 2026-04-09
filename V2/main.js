@@ -150,6 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
         mediaArea.style.aspectRatio = '16 / 9';
         mediaArea.style.height = 'auto';
         mediaArea.style.width = '50%';
+        mediaArea.style.background = '';
+        mediaArea.style.boxShadow = '';
+        mediaArea.style.marginTop = '0';
 
         if (videoId) {
             // Attendre la fin du FLIP pour charger l'iframe pour éviter les ralentissements
@@ -173,8 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
             mediaArea.style.marginTop = '2rem';
             mediaArea.style.aspectRatio = 'auto';
             mediaArea.style.maxWidth = 'none';
-            mediaArea.style.background = 'transparent';
-            mediaArea.style.boxShadow = 'none';
             mediaArea.style.position = 'relative';
 
             const pdfs = pdfSrc.split(',');
@@ -285,7 +286,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeProject() {
         detailView.classList.remove('active');
-        document.querySelector('.detail-layout').classList.remove('interactive-mode');
+        const detailLayout = document.querySelector('.detail-layout');
+        detailLayout.classList.remove('interactive-mode');
+        detailLayout.classList.remove('is-pdf');
         
         // Coupe le son de la vidéo en vidant l'iframe immédiatement
         const mediaContainer = document.getElementById('media-container');

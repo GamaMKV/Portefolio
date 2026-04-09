@@ -182,15 +182,15 @@ h1, h2, h3, h4 { font-family: var(--font-heading); text-transform: uppercase; }
 /* Specific layout for PDFs in fullscreen to preserve controls on right side */
 .detail-layout.interactive-mode.is-pdf {
     flex-direction: row-reverse;
-    align-items: flex-start;
-    height: 100%;
+    align-items: stretch;
 }
 .detail-layout.interactive-mode.is-pdf .detail-text-area {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 7rem; 
-    width: 35vw !important;
+    width: 35% !important; /* relative to parent, not viewport */
+    flex-shrink: 0;
     height: 100%;
 }
 
@@ -208,6 +208,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); text-transform: uppercase; }
 }
 
 .detail-layout.interactive-mode.is-pdf .detail-media-area {
-    width: 60vw !important;
+    width: auto !important;
+    flex-grow: 1 !important; /* takes all remaining width within modal */
     height: 100% !important;
 }
